@@ -1,0 +1,31 @@
+experiment:
+  name: "resnet50_baseline"
+  group: "baseline"
+  seed: 42
+
+model:
+  arch: "resnet50"
+  num_classes: 10
+
+data:
+  dataset: "cifar10"
+  root: "./data"
+  batch_size: 128
+  num_workers: 4
+
+training:
+  epochs: 200
+  optimizer: "sgd"
+  lr: 0.1
+  momentum: 0.9
+  weight_decay: 5e-4
+  scheduler: "cosine"
+  step_size: 50
+  gamma: 0.1
+
+augmentation:
+  strategy: "baseline"
+
+wandb:
+  project: "resnet-cifar10"
+  entity: chandanamn-cs23-na

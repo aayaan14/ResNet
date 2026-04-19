@@ -1,0 +1,32 @@
+experiment:
+  name: "resnet18_baseline"
+  group: "baseline"
+  seed: 42
+
+model:
+  arch: "resnet18"       # resnet18 | resnet50
+  num_classes: 10
+
+data:
+  dataset: "cifar10"
+  root: "./data"
+  batch_size: 128
+  num_workers: 4
+
+training:
+  epochs: 200
+  optimizer: "sgd"       # sgd | adamw
+  lr: 0.1
+  momentum: 0.9          # only used for sgd
+  weight_decay: 5e-4
+  scheduler: "cosine"    # cosine | steplr | onecycle
+  # steplr params (ignored if scheduler != steplr)
+  step_size: 50
+  gamma: 0.1
+
+augmentation:
+  strategy: "baseline"   # baseline | cutout | autoaugment
+
+wandb:
+  project: "resnet-cifar10"
+  entity: chandanamn-cs23-na          
