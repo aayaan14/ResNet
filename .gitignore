@@ -197,6 +197,8 @@ cython_debug/
 # Local project data
 /data/
 /.codex
+/wandb
+/checkpoints
 
 # Cursor
 #  Cursor is an AI-powered code editor. `.cursorignore` specifies files/directories to

@@ -18,7 +18,7 @@ training:
   optimizer: "sgd"       # sgd | adamw
   lr: 0.1
   momentum: 0.9          # only used for sgd
-  weight_decay: 5e-4
+  weight_decay: 0.0005
   scheduler: "cosine"    # cosine | steplr | onecycle
   # steplr params (ignored if scheduler != steplr)
   step_size: 50
