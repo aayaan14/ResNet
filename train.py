@@ -3,6 +3,9 @@ import yaml
 import wandb
 import torch
 import torch.optim as optim
+from dotenv import load_dotenv  
+
+load_dotenv() 
 
 from src.models import build_model
 from src.data import build_dataloaders
